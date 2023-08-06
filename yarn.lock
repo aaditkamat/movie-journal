@@ -1747,16 +1747,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eminent-ellipse@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "eminent-ellipse@workspace:."
-  dependencies:
-    "@astrojs/deno": ^4.3.0
-    astro: ^2.10.1
-    typescript: ^5.1.6
-  languageName: unknown
-  linkType: soft
-
 "emmet@npm:^2.4.3":
   version: 2.4.6
   resolution: "emmet@npm:2.4.6"
@@ -3803,6 +3793,16 @@ __metadata:
   checksum: a96865108c6c3b1b8e1d5e9f11843de1e077e57737602de1b82030815f311be11f96f09cce59bd5b903d0b29834733e5313f9301e3ed6d6f6fba2eae0df4298f
   languageName: node
   linkType: hard
+
+"movie-journal@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "movie-journal@workspace:."
+  dependencies:
+    "@astrojs/deno": ^4.3.0
+    astro: ^2.10.1
+    typescript: ^5.1.6
+  languageName: unknown
+  linkType: soft
 
 "mri@npm:^1.1.0":
   version: 1.2.0
