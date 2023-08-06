@@ -29,7 +29,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@astrojs/deno", "virtual:3d4ff10a6d8244afe9f9767e3d7a2e43014af54e93e222fffe52ec6b16f177d91de8858ee54157de0dd124fbfb69402e2e84282d0da7b6a07f8bc6dd473202e9#npm:4.3.0"],\
+            ["@types/node", "npm:20.4.8"],\
             ["astro", "virtual:3d4ff10a6d8244afe9f9767e3d7a2e43014af54e93e222fffe52ec6b16f177d91de8858ee54157de0dd124fbfb69402e2e84282d0da7b6a07f8bc6dd473202e9#npm:2.10.1"],\
+            ["dotenv", "npm:16.3.1"],\
             ["omdbapi", "npm:4.0.0"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\
@@ -2192,6 +2194,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/dlv-npm-1.1.3-187c903a21-d7381bca22.zip/node_modules/dlv/",\
           "packageDependencies": [\
             ["dlv", "npm:1.1.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["dotenv", [\
+        ["npm:16.3.1", {\
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.3.1-e6d380a398-15d75e7279.zip/node_modules/dotenv/",\
+          "packageDependencies": [\
+            ["dotenv", "npm:16.3.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4426,7 +4437,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["movie-journal", "workspace:."],\
             ["@astrojs/deno", "virtual:3d4ff10a6d8244afe9f9767e3d7a2e43014af54e93e222fffe52ec6b16f177d91de8858ee54157de0dd124fbfb69402e2e84282d0da7b6a07f8bc6dd473202e9#npm:4.3.0"],\
+            ["@types/node", "npm:20.4.8"],\
             ["astro", "virtual:3d4ff10a6d8244afe9f9767e3d7a2e43014af54e93e222fffe52ec6b16f177d91de8858ee54157de0dd124fbfb69402e2e84282d0da7b6a07f8bc6dd473202e9#npm:2.10.1"],\
+            ["dotenv", "npm:16.3.1"],\
             ["omdbapi", "npm:4.0.0"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\
