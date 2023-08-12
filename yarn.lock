@@ -876,6 +876,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@popperjs/core@npm:^2.9.3":
+  version: 2.11.8
+  resolution: "@popperjs/core@npm:2.11.8"
+  checksum: e5c69fdebf52a4012f6a1f14817ca8e9599cb1be73dd1387e1785e2ed5e5f0862ff817f420a87c7fc532add1f88a12e25aeb010ffcbdc98eace3d55ce2139cf0
+  languageName: node
+  linkType: hard
+
 "@sindresorhus/is@npm:^4.0.0":
   version: 4.6.0
   resolution: "@sindresorhus/is@npm:4.6.0"
@@ -2558,6 +2565,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"flowbite@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "flowbite@npm:1.8.1"
+  dependencies:
+    "@popperjs/core": ^2.9.3
+    mini-svg-data-uri: ^1.4.3
+  checksum: 51fa33656082ae15e66fefdf595d76cad4e7d80795d5c4174e4cfcb56bd03d867a11d42fe83a6adc1272a895edd657a76b6bdad8ccf86781d9bf34a85c516525
+  languageName: node
+  linkType: hard
+
 "foreground-child@npm:^3.1.0":
   version: 3.1.1
   resolution: "foreground-child@npm:3.1.1"
@@ -4017,6 +4034,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mini-svg-data-uri@npm:^1.4.3":
+  version: 1.4.4
+  resolution: "mini-svg-data-uri@npm:1.4.4"
+  bin:
+    mini-svg-data-uri: cli.js
+  checksum: 997f1fbd8d59a70f03761e18626d335197a3479cb9d1ff75678e4b64b864d32a0b8fc18115eabde035e5299b8b4a354a78e57dd6ac10f9d604162a6170898d09
+  languageName: node
+  linkType: hard
+
 "minimatch@npm:^3.0.4, minimatch@npm:^3.1.1":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
@@ -4137,6 +4163,7 @@ __metadata:
     "@types/node": ^20.4.8
     astro: ^2.10.1
     dotenv: ^16.3.1
+    flowbite: ^1.8.1
     omdbapi: ^4.0.0
     tailwindcss: ^3.0.24
     typescript: ^5.1.6
