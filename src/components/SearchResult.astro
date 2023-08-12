@@ -1,0 +1,19 @@
+---
+import WatchButton from './WatchButton.astro';
+import ShowMore from './ShowMore.astro';
+---
+<div class="m-3 grid divide-y-2">
+    <div class="w-42 h-24 bg-white columns-3">
+        <img class="relative object-cover h-24 w-16" alt="Movie image" src="https://m.media-amazon.com/images/M/MV5BMzcwYWFkYzktZjAzNC00OGY1LWI4YTgtNzc5MzVjMDVmNjY0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" />
+        <p>
+            <span class="text-xl text-black">
+                A Beautiful Mind (2021)
+            </span>
+            <br />
+            <span class="text-xl text-black font-bold">Russell Crowe, Ed Harris</span>
+        </p>
+        <WatchButton text="Watched" color="green"/>
+        <WatchButton text="Want to watch" color="gray"/>
+    </div>
+    <ShowMore />
+</div>

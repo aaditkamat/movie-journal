@@ -1,13 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Search from '../components/Search.astro';
+import SearchResult from '../components/SearchResult.astro';
+import WatchList from '../components/WatchList.astro';
 import dotenv from 'dotenv';
 const config = dotenv.config();
-console.log(config.parsed['OMDB_API_KEY']);
+const apiKey = config.parsed['OMDB_API_KEY'];
 ---
 
 <Layout title="Movie Journal">
 	<main>
-		<h1>Movie Journal </h1>
+		<h1 class="text-5xl font-bold">Movie Journal </h1>
+		<Search />
+		<SearchResult className="search-result-instance" movieImage="image.png" />
+		<WatchList />
 	</main>
 </Layout>
 

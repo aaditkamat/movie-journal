@@ -1,0 +1,20 @@
+---
+interface Props {
+	text: string;
+	color: string;
+}
+
+const { text, color } = Astro.props;
+---
+
+<button type="button" class={`bg-${color}-500 hover:bg-${color}-500 rounded-none`}>
+    <span class="text-xl text-black">{text}</span>
+</button>
+
+<style>
+    .watched-button {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+    }
+</style>
+ 

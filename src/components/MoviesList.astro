@@ -1,0 +1,102 @@
+---
+interface Props {
+	text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<div class="h-52 ml-10 text-black">
+    <h2 class="font-bold"> {text} </h2>
+    <ol class="list-decimal">
+      <li> 
+        A Beautiful Mind (2001) &nbsp; <i class="fa-solid fa-trash fa-xs"></i> 
+        <br />
+        IMDB: 8.2/10 Rotten Tomatoes: 74% Letterboxd: 3.8/5
+      </li>
+      <li> 
+        A Beautiful Mind (2001) &nbsp; <i class="fa-solid fa-trash fa-xs"></i>
+        <br />
+        IMDB: 8.2/10 Rotten Tomatoes: 74% Letterboxd: 3.8/5
+      </li>
+      <li> 
+        A Beautiful Mind (2001) &nbsp; <i class="fa-solid fa-trash fa-xs"></i>
+        <br />
+        IMDB: 8.2/10 Rotten Tomatoes: 74% Letterboxd: 3.8/5
+      </li>
+    </ol>
+  </div>
+
+<style>
+.watched-movies {
+  height: 208px;
+  position: relative;
+  width: 475px;
+  left: 17rem;
+  top: 10rem;
+}
+
+.element-a-beautiful-mind {
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 17px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 176px;
+  width: 442px;
+}
+
+.a-beautiful-mind {
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 8px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 97px;
+  width: 442px;
+}
+
+.overlap-group {
+  height: 59px;
+  left: 0;
+  position: absolute;
+  top: -1px;
+  width: 475px;
+}
+
+.text-wrapper {
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 28px;
+  width: 475px;
+}
+
+.div {
+  color: #000000;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 56px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 387px;
+}
+</style>
