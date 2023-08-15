@@ -1,19 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Search from '../components/Search.astro';
-import SearchResult from '../components/SearchResult.astro';
-import WatchList from '../components/WatchList.astro';
-import dotenv from 'dotenv';
-const config = dotenv.config();
-const apiKey = config.parsed['OMDB_API_KEY'];
+import Search from '../components/Search.tsx';
+import SearchResult from '../components/SearchResult.tsx';
+import WatchList from '../components/WatchList.tsx';
 ---
 
 <Layout title="Movie Journal">
 	<main>
 		<h1 class="text-5xl font-bold">Movie Journal </h1>
-		<Search />
-		<SearchResult className="search-result-instance" movieImage="image.png" />
-		<WatchList />
+		<Search client:load />
+		<SearchResult client:load/>
+		<WatchList client:load/>
 	</main>
 </Layout>
 
