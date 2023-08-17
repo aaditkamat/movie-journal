@@ -12,8 +12,8 @@ const Search = () => {
 		event.preventDefault();
 		await axios.get(baseURL, {
 			params: {
-				s: searchTerm,
-				apikey: apiKey
+				apikey: apiKey,
+				s: searchTerm
 			}
 		}).then((response) => {
 			if (response.data.Response === "True") {
