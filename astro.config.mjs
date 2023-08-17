@@ -4,5 +4,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://aaditkamat.github.io',
+  base: '/movie-journal',
   integrations: [tailwind(), react()]
 });
