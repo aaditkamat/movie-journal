@@ -6,7 +6,7 @@ const Search = () => {
 	const [searchTerm, setSearchTerm] = useState("");
 
 	const apiKey = import.meta.env.PUBLIC_OMDB_API_KEY;
-	const baseURL = "http://www.omdbapi.com";
+	const baseURL = "https://www.omdbapi.com";
 
 	const handleSubmit = async (event: FormEvent) => {
 		event.preventDefault();
