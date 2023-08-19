@@ -1,5 +1,5 @@
 import axios from "axios";
-import { addMovies } from "../movieStore.ts";
+import { addMoviesToFetchedStore, Movie } from "../movieStore.ts";
 import { FormEvent, useState} from "react";
 
 const Search = () => {
@@ -17,17 +17,19 @@ const Search = () => {
 			}
 		}).then(async (response) => {
 			if (response.data.Response === "True") {
-				let movies = [];
-				for (let movie of response.data.Search) {
+				let movies: Movie[] = [];
+				for (let searchedMovie of response.data.Search) {
 					let movieData = await axios.get(baseURL, {
 						params: {
 							apikey: apiKey,
-							i: movie.imdbID
+							i: searchedMovie.imdbID
 						}
 					});
-					movies.push(movieData.data);
+					let newMovie = movieData.data;
+					newMovie.JournalStatus = false;
+					movies.push(newMovie);
 				}
-				addMovies(movies);
+				addMoviesToFetchedStore(movies);
 			} else {
 				console.log(response.data.Error);
 			}

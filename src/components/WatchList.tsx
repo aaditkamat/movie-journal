@@ -1,5 +1,4 @@
 import MoviesList from './MoviesList.tsx';
-import { useStore } from '@nanostores/react';
 import { watchedMovieStore, wantToWatchMovieStore, Movie, WatchStatus } from '../movieStore.ts';
 
 const WatchList = () => {

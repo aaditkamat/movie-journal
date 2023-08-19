@@ -1,6 +1,6 @@
-import { atom } from 'nanostores';
+import { atom, WritableAtom } from 'nanostores';
 
-export type Rating = {
+type Rating = {
     Source: string;
     Value: string;
 };
@@ -30,49 +30,77 @@ export type Movie = {
     BoxOffice:string;
     Production:string;
     Website:string;
+    Response:string;
+    JournalStatus: boolean;
 }
+
+type MovieStore = WritableAtom<Movie[]>;
 
 export enum WatchStatus {
     Watched = 1,
     WantToWatch = 2
 }
 
-export const fetchedMovieStore = atom<Movie[]>([]);
+export const fetchedMovieStore: MovieStore = atom<Movie[]>([]);
 
 const movieSorter = (first: Movie, second: Movie) => parseInt(second.imdbRating) - parseInt(first.imdbRating);
 
-export const removeMovie = (index: number, movieStore: typeof fetchedMovieStore) => {
-    let updatedMovies = [];
-    if (index < movieStore.get().length - 1) {
-        updatedMovies = movieStore.get().splice(index, 1);
+const removeMovieFromList = (index: number, movies: Movie[]) => {
+    if (index < movies.length - 1) {
+        movies.splice(index, 1);
     } else {
-        updatedMovies = movieStore.get().slice(0, index);
+        movies = movies.slice(0, index);
     }
-    console.log(`updatedMovies: ${updatedMovies.toString()}`)
+    return movies;
+}
+
+const insertMovieInList = (index: number, movies: Movie[], movie: Movie) => {
+    movies.splice(index, 0, movie);
+    return movies;
+}
+
+const updateMovieJournalStatus = (movie: Movie, journalStatus: boolean) => {
+    let fetchedMovies: Movie[] = fetchedMovieStore.get();
+    let fetchedMovieIndex: number = fetchedMovies.findIndex((m) => m.imdbID === movie.imdbID);
+    if (fetchedMovieIndex !== -1) {
+        let fetchedMovie: Movie = fetchedMovies[fetchedMovieIndex];
+        fetchedMovie.JournalStatus = journalStatus;
+        let updatedMovies = removeMovieFromList(fetchedMovieIndex, fetchedMovies);
+        updatedMovies = insertMovieInList(fetchedMovieIndex, updatedMovies, fetchedMovie);
+        fetchedMovieStore.set(updatedMovies);
+        return true;
+    } else {
+        return false;
+    }
+}
+
+const sortMovies = (updatedMovies: Movie[], movieStore: MovieStore) => {
     updatedMovies.sort(movieSorter);
-    console.log(`updatedMovies after sorting: ${updatedMovies.toString()}`)
     movieStore.set(updatedMovies);
 }
-export const addMovie = (movie: Movie, movieStore: typeof fetchedMovieStore) => {
+
+export const removeMovieFromStore = (index: number, movieStore: MovieStore) => {
+    updateMovieJournalStatus(movieStore.get()[index], false);
+    let updatedMovies = removeMovieFromList(index, movieStore.get());
+    sortMovies(updatedMovies, movieStore);
+}
+export const addMovieToStore = (movie: Movie, movieStore: MovieStore) => {
+    const hasMovieJournalStatusUpdated = updateMovieJournalStatus(movie, true);
+    if (!hasMovieJournalStatusUpdated) return false;
     let updatedMovies = movieStore.get();
-    if (updatedMovies.find((m) => m.imdbID === movie.imdbID)) {
-        return;
-    } 
     updatedMovies = [...updatedMovies, movie];
-    updatedMovies.sort(movieSorter);
-    movieStore.set(updatedMovies);
-}
-export const addMovies = (movies: Movie[]) => {
-    const updatedMovies = [...fetchedMovieStore.get(), ...movies];
-    updatedMovies.sort(movieSorter);
-    fetchedMovieStore.set(updatedMovies);
+    sortMovies(updatedMovies, movieStore);
 }
 
-export const watchedMovieStore = atom<Movie[]>([]);
-export const removeWatchedMovie = (index: number) => removeMovie(index, watchedMovieStore);
-export const addWatchedMovie = (movie: Movie) => addMovie(movie, watchedMovieStore);
+export const addMoviesToFetchedStore = (movies: Movie[]) => {
+    fetchedMovieStore.set([...fetchedMovieStore.get(), ...movies]);
+}
+
+export const watchedMovieStore: MovieStore = atom<Movie[]>([]);
+export const removeWatchedMovieFromStore = (index: number) => removeMovieFromStore(index, watchedMovieStore);
+export const addWatchedMovieToStore = (movie: Movie) => addMovieToStore(movie, watchedMovieStore);
 
 
-export const wantToWatchMovieStore = atom<Movie[]>([]);
-export const removeWantToWatchMovie = (index: number) => removeMovie(index, wantToWatchMovieStore);
-export const addWantToWatchMovie = (movie: Movie) => addMovie(movie, wantToWatchMovieStore);
+export const wantToWatchMovieStore: MovieStore = atom<Movie[]>([]);
+export const removeWantToWatchMovieFromStore = (index: number) => removeMovieFromStore(index, wantToWatchMovieStore);
+export const addWantToWatchMovieToStore = (movie: Movie) => addMovieToStore(movie, wantToWatchMovieStore);

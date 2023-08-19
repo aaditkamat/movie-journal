@@ -1,4 +1,4 @@
-import { Movie, WatchStatus, removeWatchedMovie, removeWantToWatchMovie } from "../movieStore.ts";
+import { Movie, WatchStatus, removeWatchedMovieFromStore, removeWantToWatchMovieFromStore } from "../movieStore.ts";
 import type { Store } from "nanostores";
 import { useStore } from "@nanostores/react";
 import { useState } from "react";
@@ -13,11 +13,10 @@ const MovieList = ({ text, movieStore, watchStatus }: MovieTextProps) => {
   const movies: Movie[] = useStore(movieStore);
 
   const handleClick = (index: number) => {
-    console.log('Trash icon clicked');
     if (watchStatus === WatchStatus.Watched) {
-        removeWatchedMovie(index);
+        removeWatchedMovieFromStore(index);
     } else {
-      removeWantToWatchMovie(index);
+      removeWantToWatchMovieFromStore(index);
     }
   }
 
