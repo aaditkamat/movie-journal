@@ -15,9 +15,19 @@ const Search = () => {
 				apikey: apiKey,
 				s: searchTerm
 			}
-		}).then((response) => {
+		}).then(async (response) => {
 			if (response.data.Response === "True") {
-				fetchedMovieStore.set(response.data.Search);
+				let movies = [];
+				for (let movie of response.data.Search) {
+					let movieData = await axios.get(baseURL, {
+						params: {
+							apikey: apiKey,
+							i: movie.imdbID
+						}
+					});
+					movies.push(movieData.data);
+				}
+				fetchedMovieStore.set(movies);
 			} else {
 				console.log(response.data.Error);
 			}
