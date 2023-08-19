@@ -23,6 +23,7 @@ const SearchResult = () => {
                             <span className="text-xl text-black font-bold">&nbsp;({movie.Year})</span>
                             </p>
                             <WatchButton text="Watched" color="green" onClick={() => watchedMovieStore.set([...watchedMovieStore.get(), movie])}/>
+                            &nbsp;
                             <WatchButton text="Want to Watch" color="gray" onClick={() => wantToWatchMovieStore.set([...wantToWatchMovieStore.get(), movie])}/>
                         </div>
                     </div>
