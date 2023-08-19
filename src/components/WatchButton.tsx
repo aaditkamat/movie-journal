@@ -5,7 +5,7 @@ type WatchButtonProps = {
 };
 
 const WatchButton = ({text, color, onClick}: WatchButtonProps) => (
-        <button onClick={onClick} type="button" className="text-black style-none" style={{backgroundColor: color}}>
+        <button onClick={onClick} type="button" className="px-2 text-black style-none" style={{backgroundColor: color}}>
             {text}
         </button>
 );
