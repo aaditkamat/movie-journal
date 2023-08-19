@@ -22,7 +22,7 @@ const MovieList = ({ text, movieStore, watchStatus }: MovieTextProps) => {
   }
 
   return (
-    <div className="h-52 ml-10 text-black">
+    <div className="overflow-auto h-100 ml-10 text-black">
       <h2 className="font-bold"> {text} </h2>
       <ol className="list-decimal">
         {
