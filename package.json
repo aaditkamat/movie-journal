@@ -7,7 +7,6 @@
     "start": "astro dev",
     "build": "astro build",
     "serve": "yarn build && serve dist/",
-    "preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
     "astro": "astro"
   },
   "dependencies": {
