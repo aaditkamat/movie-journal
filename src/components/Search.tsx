@@ -1,5 +1,5 @@
 import axios from "axios";
-import { fetchedMovieStore } from "../movieStore.ts";
+import { addMovies } from "../movieStore.ts";
 import { FormEvent, useState} from "react";
 
 const Search = () => {
@@ -27,7 +27,7 @@ const Search = () => {
 					});
 					movies.push(movieData.data);
 				}
-				fetchedMovieStore.set(movies);
+				addMovies(movies);
 			} else {
 				console.log(response.data.Error);
 			}

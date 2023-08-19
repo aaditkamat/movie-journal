@@ -1,8 +1,6 @@
 import WatchButton from './WatchButton.tsx';
-import ShowMore from './ShowMore.tsx';
-import { useState, useEffect } from 'react';
 import { useStore } from '@nanostores/react';
-import { fetchedMovieStore, watchedMovieStore, wantToWatchMovieStore, Movie } from '../movieStore';
+import { fetchedMovieStore, Movie, addWatchedMovie, addWantToWatchMovie } from '../movieStore';
 
 const SearchResult = () => {
     const movies = useStore(fetchedMovieStore);
@@ -25,9 +23,9 @@ const SearchResult = () => {
                             <br />
                             <span className="text-xlfont-bold">{movie.Actors}</span>
                             </p>
-                            <WatchButton text="Watched" color="green" onClick={() => watchedMovieStore.set([...watchedMovieStore.get(), movie])}/>
+                            <WatchButton text="Watched" color="green" onClick={() => addWatchedMovie(movie)}/>
                             &nbsp;
-                            <WatchButton text="Want to Watch" color="gray" onClick={() => wantToWatchMovieStore.set([...wantToWatchMovieStore.get(), movie])}/>
+                            <WatchButton text="Want to Watch" color="gray" onClick={() => addWantToWatchMovie(movie)}/>
                         </div>
                     </div>
                 ))
