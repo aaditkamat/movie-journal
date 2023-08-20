@@ -23,7 +23,8 @@ const Search = () => {
 						params: {
 							apikey: apiKey,
 							i: searchedMovie.imdbID
-						}
+						},
+						timeout: 5000
 					});
 					let newMovie = movieData.data;
 					newMovie.JournalStatus = false;
