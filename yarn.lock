@@ -1420,8 +1420,8 @@ __metadata:
   linkType: hard
 
 "astro@npm:^2.10.1":
-  version: 2.10.1
-  resolution: "astro@npm:2.10.1"
+  version: 2.10.15
+  resolution: "astro@npm:2.10.15"
   dependencies:
     "@astrojs/compiler": ^1.8.0
     "@astrojs/internal-helpers": ^0.1.2
@@ -1445,7 +1445,6 @@ __metadata:
     common-ancestor-path: ^1.0.1
     cookie: ^0.5.0
     debug: ^4.3.4
-    deepmerge-ts: ^4.3.0
     devalue: ^4.3.2
     diff: ^5.1.0
     es-module-lexer: ^1.3.0
@@ -1456,6 +1455,7 @@ __metadata:
     github-slugger: ^2.0.0
     gray-matter: ^4.0.3
     html-escaper: ^3.0.3
+    http-cache-semantics: ^4.1.1
     js-yaml: ^4.1.0
     kleur: ^4.1.4
     magic-string: ^0.30.2
@@ -1488,7 +1488,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 1fad46de4e1f36cbbd1a7e336bcce5ae9cf02b0967e0936614e753f2a8402edb77b158f43645eed88614cd6cfa5715f44b10f63d4238719a8f1e897df1977065
+  checksum: cf52f88b18fe3971aab87b6c6603a0295ef84d213daff387a52e080966ca6ae0c29e545b9dd2f41e7f0dd43e00e21c951a496eccb7b8e413a2e2ecb2c5238f42
   languageName: node
   linkType: hard
 
@@ -2084,13 +2084,6 @@ __metadata:
   version: 0.6.0
   resolution: "deep-extend@npm:0.6.0"
   checksum: 7be7e5a8d468d6b10e6a67c3de828f55001b6eb515d014f7aeb9066ce36bd5717161eb47d6a0f7bed8a9083935b465bc163ee2581c8b128d29bf61092fdf57a7
-  languageName: node
-  linkType: hard
-
-"deepmerge-ts@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "deepmerge-ts@npm:4.3.0"
-  checksum: d5f8a96df9a2bc7177d59544b9390ba76e50fb725f776669068ca04eef319e98ee8870cf7b7ecca9f636b711d57cea571ac61553ee01101a614c045f7a86e0be
   languageName: node
   linkType: hard
 
