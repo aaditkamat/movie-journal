@@ -4451,7 +4451,7 @@ __metadata:
     axios: ^1.4.0
     dotenv: ^16.3.1
     flowbite: ^1.8.1
-    nanostores: ^0.9.3
+    nanostores: ^0.11.0
     react: ^18.0.0
     react-dom: ^18.0.0
     serve: ^14.2.0
@@ -4508,10 +4508,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanostores@npm:^0.9.3":
-  version: 0.9.3
-  resolution: "nanostores@npm:0.9.3"
-  checksum: aad0db366a3fa82d1e3664199145cd28f71ecb4fc6f3fcaeb758400485efbd8f888fcb9db3cca4827c5ee54a5f79451ae6f8bf5080b54befad50469c411001d0
+"nanostores@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "nanostores@npm:0.11.0"
+  checksum: 2c13eba086d51e67395878c6349ad33828cc47a49a2ebe892303f0f38db58b9d08d684f78f56b9eb523376562e48af1da2dbe917ba0afe5f4e61bd30b391edb0
   languageName: node
   linkType: hard
 

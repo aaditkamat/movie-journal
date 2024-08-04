@@ -20,7 +20,7 @@
     "axios": "^1.4.0",
     "dotenv": "^16.3.1",
     "flowbite": "^1.8.1",
-    "nanostores": "^0.9.3",
+    "nanostores": "^0.11.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
