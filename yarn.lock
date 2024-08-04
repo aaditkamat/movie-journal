@@ -953,12 +953,12 @@ __metadata:
   linkType: hard
 
 "@nanostores/react@npm:^0.7.1":
-  version: 0.7.1
-  resolution: "@nanostores/react@npm:0.7.1"
+  version: 0.7.3
+  resolution: "@nanostores/react@npm:0.7.3"
   peerDependencies:
-    nanostores: ^0.9.0
+    nanostores: ^0.9.0 || ^0.10.0 || ^0.11.0
     react: ">=18.0.0"
-  checksum: 74437e518952cc17651046a056b84cd966cd880b2eb6720dee0957c31257a6946a5f14938a4beb723b01a12be919b5fdb9d0cb195d46d0ab6ef6606c1ceeb9e2
+  checksum: da485cb7907e3d930be9f9dd973c5dea5d9187f5c33e800f539ccdfecba646ab2e704f81fb8b8cfa9447f1657e08e47c87258bec5972fcf1c246c977aa63c4fa
   languageName: node
   linkType: hard
 
