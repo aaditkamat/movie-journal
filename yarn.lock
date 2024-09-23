@@ -952,13 +952,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nanostores/react@npm:^0.7.1":
-  version: 0.7.1
-  resolution: "@nanostores/react@npm:0.7.1"
+"@nanostores/react@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "@nanostores/react@npm:0.8.0"
   peerDependencies:
-    nanostores: ^0.9.0
+    nanostores: ^0.9.0 || ^0.10.0 || ^0.11.0
     react: ">=18.0.0"
-  checksum: 74437e518952cc17651046a056b84cd966cd880b2eb6720dee0957c31257a6946a5f14938a4beb723b01a12be919b5fdb9d0cb195d46d0ab6ef6606c1ceeb9e2
+  checksum: f9a5d7803e7db072b97307697b77e8033a5f8cd7a64ccfa3b484f4ab1e6916cbf5855d16f98829eff41487277d31da3ca78130e046b41670f52ad610749c4774
   languageName: node
   linkType: hard
 
@@ -4443,7 +4443,7 @@ __metadata:
     "@astrojs/deno": ^4.3.0
     "@astrojs/react": ^2.2.1
     "@astrojs/tailwind": ^4.0.0
-    "@nanostores/react": ^0.7.1
+    "@nanostores/react": ^0.8.0
     "@types/node": ^20.4.8
     "@types/react": ^18.0.21
     "@types/react-dom": ^18.0.6
