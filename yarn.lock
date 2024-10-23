@@ -1132,9 +1132,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:^20.4.8":
-  version: 20.4.8
-  resolution: "@types/node@npm:20.4.8"
-  checksum: 86a3963c0c7af3410553d1dfa4b018a20b3cb3ab4d8e8ffe27408b6338c5de0374b0bf379bc705da2205b466daa751ccfe062f453ba9bde34fdb0e5163ca6a68
+  version: 20.17.0
+  resolution: "@types/node@npm:20.17.0"
+  dependencies:
+    undici-types: ~6.19.2
+  checksum: 01234eb8a5ba7e3e4324f74c6b7354d8f37fc8eb29eddaf595bcf172bdfb32184be0a5721ee54bc8440562a4037f322eb967550e3b0b6402d0e14fcb7eb6d98b
   languageName: node
   linkType: hard
 
@@ -5977,6 +5979,13 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: f53bfe97f7c8b2b6d23cf572750d4e7d1e0c5fff1c36d859d0ec84556a827b8785077bc27676bf7e71fae538e517c3ecc0f37e7f593be913d884805d931bc8be
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~6.19.2":
+  version: 6.19.8
+  resolution: "undici-types@npm:6.19.8"
+  checksum: de51f1b447d22571cf155dfe14ff6d12c5bdaec237c765085b439c38ca8518fc360e88c70f99469162bf2e14188a7b0bcb06e1ed2dc031042b984b0bb9544017
   languageName: node
   linkType: hard
 
